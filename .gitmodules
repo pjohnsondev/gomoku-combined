@@ -1,0 +1,6 @@
+[submodule "UNE-Gomoku-React"]
+	path = UNE-Gomoku-React
+	url = https://github.com/pjohnsondev/UNE-Gomoku-React.git
+[submodule "UNE-Gomoku-Express"]
+	path = UNE-Gomoku-Express
+	url = https://github.com/pjohnsondev/UNE-Gomoku-Express.git

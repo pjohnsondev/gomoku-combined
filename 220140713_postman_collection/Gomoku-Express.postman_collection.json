@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "0138b72d-6191-4dfb-a496-fd9e387868ba",
+		"name": "Gomoku-Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10248156"
+	},
+	"item": [
+		{
+			"name": "Game Handlers",
+			"item": [
+				{
+					"name": "Get All Games for User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiX2lkIjoiNjMzOTQ3ZTg2ZjFjMjY3NGY4NjRmNGMzIiwiaWF0IjoxNjY0Njk4ODA3LCJleHAiOjE2NjQ3Mjc2MDd9.nV-V33TBejwlSKLqXUpczwCJuUYNe8PwKYyGJnlR_jSTSwMawFk2P9kQlG9-UhtLgw68Ft_KRYHUFuuYuQz2W06M9yO2sIT9u94s4QtnJDfUtBXXRxYbEeFWTaCADWTOUm-yRG-ZJHdAr2MdqaSk_ipDqqf3KnSv52hqXi5QBUk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBhdWxvbmxpbmUiLCJfaWQiOiI2MzMzYmExYmI1N2U2ZGU3NTU4YWYzNDIiLCJpYXQiOjE2NjQzMzk3ODcsImV4cCI6MTY2NDM2ODU4N30.EezcS1W3P0d5ddeuqzFgp53betAa_npgTrnDSrW7w3imAu_ArwD2UBzCFSrL54V1PepVpucw-ixFpvZT19KcnBwzKYHhydja-wQufLSObuo9Np3bRptwHgz1ZcNEs_hB8FztA5CakXuVWz8mpaeqX7o-rtrozzBnuWVPy93B8so",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/game/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"game",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Game by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiX2lkIjoiNjMzOTQ3ZTg2ZjFjMjY3NGY4NjRmNGMzIiwiaWF0IjoxNjY0Njk4ODA3LCJleHAiOjE2NjQ3Mjc2MDd9.nV-V33TBejwlSKLqXUpczwCJuUYNe8PwKYyGJnlR_jSTSwMawFk2P9kQlG9-UhtLgw68Ft_KRYHUFuuYuQz2W06M9yO2sIT9u94s4QtnJDfUtBXXRxYbEeFWTaCADWTOUm-yRG-ZJHdAr2MdqaSk_ipDqqf3KnSv52hqXi5QBUk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBhdWxvbmxpbmUiLCJfaWQiOiI2MzMzYmExYmI1N2U2ZGU3NTU4YWYzNDIiLCJpYXQiOjE2NjQzMzk3ODcsImV4cCI6MTY2NDM2ODU4N30.EezcS1W3P0d5ddeuqzFgp53betAa_npgTrnDSrW7w3imAu_ArwD2UBzCFSrL54V1PepVpucw-ixFpvZT19KcnBwzKYHhydja-wQufLSObuo9Np3bRptwHgz1ZcNEs_hB8FztA5CakXuVWz8mpaeqX7o-rtrozzBnuWVPy93B8so",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/game/633949c76f1c2674f864f4d5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"game",
+								"633949c76f1c2674f864f4d5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Game",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiX2lkIjoiNjMzOTQ3ZTg2ZjFjMjY3NGY4NjRmNGMzIiwiaWF0IjoxNjY0Njk4ODA3LCJleHAiOjE2NjQ3Mjc2MDd9.nV-V33TBejwlSKLqXUpczwCJuUYNe8PwKYyGJnlR_jSTSwMawFk2P9kQlG9-UhtLgw68Ft_KRYHUFuuYuQz2W06M9yO2sIT9u94s4QtnJDfUtBXXRxYbEeFWTaCADWTOUm-yRG-ZJHdAr2MdqaSk_ipDqqf3KnSv52hqXi5QBUk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"gameId\": 6,\n        \"boardSize\": 9,\n        \"winner\": \"white\",\n        \"date\": \"2012-04-23T18:25:43.511Z\",\n        \"moves\": [22,2,34],\n        \"userId\": \"633947e86f1c2674f864f4c3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/game/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"game",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Active Game Handlers",
+			"item": [
+				{
+					"name": "Get Empty Active Game",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"632ee39cf82770bfff38db83\",\n    \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBhdWxvbmxpbmUiLCJfaWQiOiI2MzMzYmExYmI1N2U2ZGU3NTU4YWYzNDIiLCJpYXQiOjE2NjQzMzQ0NTMsImV4cCI6MTY2NDM2MzI1M30.RmlDZ3ohJPtSrAmJ66xC13JuBHJo40QvLTsmu2xs0s2qTfcTINpNd97-ltNtTUp_gD1TJd08NeGkVmdDvCNejYAEBpoNXt70oTM26LcaY1Cbp8bflpDahQxCAB28tLMgZT5BHU66M-NaBWGYWIBdHXr634NRDkTOjDntCmOgOK0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Active Game by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiX2lkIjoiNjMzOTQ3ZTg2ZjFjMjY3NGY4NjRmNGMzIiwiaWF0IjoxNjY0Njk4MzY2LCJleHAiOjE2NjQ3MjcxNjZ9.lXtfN1G7KuHhYZ9qJEfxMX9cABVCl4Uo0gx-Gkqx8TLjGK-DyLxdjrMeyoqHi8nQEbDiNV7-n2U_zhn4CzpvOuQP21tMfDSnuyaVFGptAS7C-kiTO47isomJOvrJIkZpCP72hAcC0a_V1QM7LUR8-XdNIKF-oWXBeOFp81RFez0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/active/6339482d6f1c2674f864f4c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"active",
+								"6339482d6f1c2674f864f4c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Active Game",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiX2lkIjoiNjMzOTQ3ZTg2ZjFjMjY3NGY4NjRmNGMzIiwiaWF0IjoxNjY0Njk4MzY2LCJleHAiOjE2NjQ3MjcxNjZ9.lXtfN1G7KuHhYZ9qJEfxMX9cABVCl4Uo0gx-Gkqx8TLjGK-DyLxdjrMeyoqHi8nQEbDiNV7-n2U_zhn4CzpvOuQP21tMfDSnuyaVFGptAS7C-kiTO47isomJOvrJIkZpCP72hAcC0a_V1QM7LUR8-XdNIKF-oWXBeOFp81RFez0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"gameId\": 6,\n        \"boardSize\": 9,\n        \"date\": \"2012-04-23T18:25:43.511Z\",\n        \"moves\": [],\n        \"userId\": \"633947e86f1c2674f864f4c3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/active/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"active",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Game",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiX2lkIjoiNjMzOTQ3ZTg2ZjFjMjY3NGY4NjRmNGMzIiwiaWF0IjoxNjY0Njk4MzY2LCJleHAiOjE2NjQ3MjcxNjZ9.lXtfN1G7KuHhYZ9qJEfxMX9cABVCl4Uo0gx-Gkqx8TLjGK-DyLxdjrMeyoqHi8nQEbDiNV7-n2U_zhn4CzpvOuQP21tMfDSnuyaVFGptAS7C-kiTO47isomJOvrJIkZpCP72hAcC0a_V1QM7LUR8-XdNIKF-oWXBeOFp81RFez0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"gameId\": 6,\n    \"boardSize\": 9,\n    \"date\": \"2012-04-23T18:25:43.511Z\",\n    \"moves\": [22, 6],\n    \"userId\": \"633947e86f1c2674f864f4c3\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/active/6339482d6f1c2674f864f4c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"active",
+								"6339482d6f1c2674f864f4c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Active Game",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiX2lkIjoiNjMzOTQ3ZTg2ZjFjMjY3NGY4NjRmNGMzIiwiaWF0IjoxNjY0Njk4MzY2LCJleHAiOjE2NjQ3MjcxNjZ9.lXtfN1G7KuHhYZ9qJEfxMX9cABVCl4Uo0gx-Gkqx8TLjGK-DyLxdjrMeyoqHi8nQEbDiNV7-n2U_zhn4CzpvOuQP21tMfDSnuyaVFGptAS7C-kiTO47isomJOvrJIkZpCP72hAcC0a_V1QM7LUR8-XdNIKF-oWXBeOFp81RFez0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/active/6339482d6f1c2674f864f4c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"active",
+								"6339482d6f1c2674f864f4c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth Handlers",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testing123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testing123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
